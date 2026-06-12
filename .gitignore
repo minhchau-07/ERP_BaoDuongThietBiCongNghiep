@@ -216,3 +216,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Odoo
+*.log
+*.pid
+filestore/
+sessions/
+
+# Docker
+.env
+
+# SQL dump (tuỳ chọn - bỏ dấu # nếu KHÔNG muốn push init.sql lên git)
+# init.sql
+
+# Windows
+Thumbs.db
+desktop.ini

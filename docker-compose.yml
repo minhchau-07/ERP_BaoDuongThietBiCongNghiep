@@ -8,6 +8,7 @@ services:
       POSTGRES_PASSWORD: odoo
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   odoo:
     image: odoo:18
@@ -22,6 +23,7 @@ services:
       PASSWORD: odoo
     volumes:
       - odoo_data:/var/lib/odoo
+      - ./custom_addons:/mnt/extra-addons
 
 volumes:
   postgres_data:
